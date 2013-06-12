@@ -8,6 +8,27 @@ unique client_id and client_secret must have been issued for the client applicat
 
 The application server IP address must also have been white-listed to be able to access information.
 
+Examples:
+
+    # Get a user token
+
+    PlumDistrict::OAuth.@client_id = 'plumdistrictapitoken'
+    PlumDistrict::OAuth.@client_secret = 'plumdistrictapitokensecret'
+    result_hash = PlumDistrict::OAuth.authorize_user('test@example.com', 'somepassword')
+
+    # Get user information
+
+    users_oauth_token =  result_hash['access_token']
+    user_info_hash =  PlumDistrict::OAuth.users_info(users_oauth_token)
+
+    email      =  user_info_hash['email']
+    first_name =  user_info_hash['first_name']
+    last_name  =  user_info_hash['last_name']
+
+    # Revoke user token privilege
+
+    PlumDistrict::OAuth.revoke_user(users_oauth_token)
+
 == Legal
 
 Released under the MIT License: www.opensource.org/licenses/mit-license.php

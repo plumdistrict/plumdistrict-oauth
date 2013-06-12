@@ -12,11 +12,11 @@ module PlumDistrict
     # Authorization endpoint that returns a new token for a user
     @authorize_url = 'https://www.plumdistrict.com/api/v2/oauth/authenticate.json'
 
-    # Revoke a user's token endpoint
-    @revoke_url    = 'https://www.plumdistrict.com/api/v2/oauth/revoke.json'
-
     # Retrieve user information endpoint
     @user_info_url = 'https://www.plumdistrict.com/api/v2/oauth/users/show.json'
+
+    # Revoke a user's token endpoint
+    @revoke_url    = 'https://www.plumdistrict.com/api/v2/oauth/revoke.json'
 
     class << self
 
