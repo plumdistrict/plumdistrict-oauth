@@ -1,0 +1,15 @@
+= Plumdistrict OAuth
+
+This library can be used by client applications to authenticate users against www.plumdistrict.com
+and retrieve limited user information.
+
+A client application must have been registered at plumdistrict and a
+unique client_id and client_secret must have been issued for the client application to make requests.
+
+The application server IP address must also have been white-listed to be able to access information.
+
+== Legal
+
+Released under the MIT License: www.opensource.org/licenses/mit-license.php
+
+
