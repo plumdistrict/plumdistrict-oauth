@@ -2,6 +2,7 @@ require 'rest_client'
 
 module PlumDistrict
   class OAuth
+
     # API application ID registered at plumdistrict
     @client_id     = nil
 
@@ -74,14 +75,10 @@ module PlumDistrict
             { error: JSON.parse(result.body), status: result.code }
         end
       rescue RestClient::Exception => e
-        if e.response.code < 400
           { error: JSON.parse(e.response.body), status: e.response.code }
-        else
-          { error: JSON.parse(e.response.body), status: e.response.code }
-        end
       end
 
-    end # end class functions
+    end
 
   end
 end
